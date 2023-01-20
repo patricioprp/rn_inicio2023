@@ -2,18 +2,22 @@ import react from "react";
 import { Text, View, StyleSheet } from "react-native";
 
 const BoxScreeen = () => {
-    return <View style={styles.parentStyle}>
-        <View style = {styles.viewOneStyle}/>
-        <View style = {styles.viewTwoStyle}/>
-        <View style = {styles.viewThreeStyle}/>
-    </View>
+    return (
+        <View style={styles.parentStyle}>
+            <View style = {styles.viewOneStyle}/>
+                <View style = {styles.viewTwoParent}>
+                    <View style = {styles.viewTwoStyle}/>    
+                </View>
+            <View style = {styles.viewThreeStyle}/>
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({
     parentStyle:{
         borderWidth: 3,
         borderColor:'black',
-        height: 100 ,
+        height: 200 ,
         flexDirection:'row',
         justifyContent: 'space-between'
     },
@@ -25,8 +29,11 @@ const styles = StyleSheet.create({
     viewTwoStyle:{
         height: 50,
         width: 50,
-        backgroundColor: 'blue',
-        alignSelf: 'flex-end'//para que el cuadro no se salga del recuadro
+        backgroundColor: 'blue'
+    },
+    viewTwoParent:{
+        height: 100,
+        justifyContent: 'flex-end'
     },
     viewThreeStyle:{
         height: 50,

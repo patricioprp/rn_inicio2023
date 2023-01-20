@@ -44,9 +44,15 @@ const HomeScreen = ({navigation}) => {
     onPress={()=> navigation.navigate('Box')}
     title = "BoxScreen solucion mia"
     />
-    <Button 
+
+<Button 
     onPress={()=> navigation.navigate('Boxb')}
     title = "BoxScreen segunda solucion"
+    />
+
+<Button 
+    onPress={()=> navigation.navigate('Boxc')}
+    title = "BoxScreen Tercera solucion"
     />
 
     <TouchableOpacity onPress={()=>console.log('On press list')}>
